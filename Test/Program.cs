@@ -17,37 +17,48 @@ namespace Test
             Console.WriteLine("Введите знак операции, которую хотите произвести. Пример: + - * / %");
             string operation = Console.ReadLine();
 
-            if(operation == "+")
+            switch (operation)
             {
-                double res = (a + b);
-                Console.WriteLine(a + " + " + b + " = " + res);
+                case "+":
+                    {
+                        double res = a + b;
+                        Console.WriteLine(a + " + " + b + " = " + res);
+                    }           
+                    
+                    break;
+
+                case "-":
+                    {
+                        double res = a - b;
+                        Console.WriteLine(a + " - " + b + " = " + res);
+                    }
+                    break;
+
+                case "*":
+                    {
+                        double res = a * b;
+                        Console.WriteLine(a + " * " + b + " = " + res);
+                    }
+                    break;
+
+                case "/":
+                    {
+                        double res = a / b;
+                        Console.WriteLine(a + " / " + b + " = " + res);
+                    }
+                    break;
+
+                case "%":
+                    {
+                        double res = a % b;
+                        Console.WriteLine(a + " % " + b + " = " + res);
+                    }
+                    break;
+
+                default:
+                    Console.WriteLine("Вы ввели некорректный оператор.");
+                    break;
             }
-
-            if (operation == "-")
-            {
-                double res = (a - b);
-                Console.WriteLine(a + " - " + b + " = " + res);
-            }
-
-            if (operation == "*")
-            {
-                double res = (a * b);
-                Console.WriteLine(a + " * " + b + " = " + res);
-            }
-
-            if (operation == "/")
-            {
-                double res = (a / b);
-                Console.WriteLine(a + " / " + b + " = " + res);
-            }
-
-            if (operation == "%")
-            {
-                double res = (a % b);
-                Console.WriteLine(a + " % " + b + " = " + res);
-            }
-
-
         }
     }
 }
