@@ -43,8 +43,15 @@ namespace Test
 
                 case "/":
                     {
-                        double res = a / b;
-                        Console.WriteLine(a + " / " + b + " = " + res);
+                        if (b == 0)
+                        {
+                            Console.WriteLine("На ноль делить нельзя.");
+                        }
+                        else
+                        {
+                            double res = a / b;
+                            Console.WriteLine(a + " / " + b + " = " + res);
+                        }
                     }
                     break;
 
